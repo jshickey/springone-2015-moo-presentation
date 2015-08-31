@@ -1,0 +1,36 @@
+= Functional Programming Kata with Groovy
+Scott Hickey jscotthickey@gmail.com
+Mutual of Omaha
+Principal Enterprise Architect
+@jshickey
+
+:imagesdir: images
+:sourcedir: snippets
+:source-highlighter: highlightjs
+
+== The Bank OCR Kata Description
+The full description of the kata is located at http://www.codingdojo.org/cgi-bin/index.pl?KataBankOCR
+
+.Kata is broken up into 4 stories.
+
+* convert OCR account to a numeric decimal string
+
+* compute a checksum to make sure the account is valid
+
+* handle illegible characters by using ? as a placeholder
+
+== Groovy's Map/Filter/Reduce
+
+* filter => findAll
+* map    => collect
+* reduce => inject (sum, avg)
+
+[source,groovy]
+----
+enum OcrDigit {
+    
+    ZERO('0', ' _ ' +
+              '| |' +
+              '|_|'),)
+}
+----
